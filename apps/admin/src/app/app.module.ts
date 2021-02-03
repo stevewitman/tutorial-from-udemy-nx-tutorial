@@ -11,6 +11,7 @@ import {
   adminDashboardRoutes,
 } from '@udemy-nx-tutorial/admin/dashboard';
 import { RouterModule } from '@angular/router';
+import { SharedModule } from '@udemy-nx-tutorial/shared';
 
 @NgModule({
   declarations: [AppComponent],
@@ -34,6 +35,7 @@ import { RouterModule } from '@angular/router';
     EffectsModule.forRoot([]),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     AdminDashboardModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent],

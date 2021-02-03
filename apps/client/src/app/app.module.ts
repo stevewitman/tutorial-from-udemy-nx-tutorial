@@ -12,6 +12,7 @@ import {
   ClientHomeModule,
   clientHomeRoutes,
 } from '@udemy-nx-tutorial/client/home';
+import { SharedModule } from '@udemy-nx-tutorial/shared';
 
 @NgModule({
   declarations: [AppComponent],
@@ -44,6 +45,7 @@ import {
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     StoreRouterConnectingModule.forRoot(),
     ClientHomeModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent],

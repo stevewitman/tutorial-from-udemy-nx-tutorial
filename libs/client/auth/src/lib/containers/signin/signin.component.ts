@@ -11,4 +11,7 @@ export class SigninComponent implements OnInit {
     console.log('Signin Component')
   }
 
+  signin() {
+    console.log('signin button clicked')
+  }
 }

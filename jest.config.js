@@ -4,6 +4,7 @@ module.exports = {
     '<rootDir>/apps/client',
     '<rootDir>/libs/admin/dashboard',
     '<rootDir>/libs/client/home',
-    '<rootDir>/libs/client/auth'
-  ]
+    '<rootDir>/libs/client/auth',
+    '<rootDir>/libs/shared',
+  ],
 };
