@@ -8,12 +8,28 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import {
+  ClientHomeModule,
+  clientHomeRoutes,
+} from '@udemy-nx-tutorial/client/home';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([], { initialNavigation: 'enabled' }),
+    RouterModule.forRoot(
+      [
+        { path: 'home', children: clientHomeRoutes },
+        {
+          path: 'auth',
+          loadChildren: () =>
+            import('@udemy-nx-tutorial/client/auth').then(
+              (m) => m.ClientAuthModule
+            ),
+        },
+      ],
+      { initialNavigation: 'enabled' }
+    ),
     StoreModule.forRoot(
       {},
       {
@@ -27,6 +43,7 @@ import { StoreRouterConnectingModule } from '@ngrx/router-store';
     EffectsModule.forRoot([]),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     StoreRouterConnectingModule.forRoot(),
+    ClientHomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

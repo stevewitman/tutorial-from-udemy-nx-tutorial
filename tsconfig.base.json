@@ -17,7 +17,9 @@
     "paths": {
       "@udemy-nx-tutorial/admin/dashboard": [
         "libs/admin/dashboard/src/index.ts"
-      ]
+      ],
+      "@udemy-nx-tutorial/client/home": ["libs/client/home/src/index.ts"],
+      "@udemy-nx-tutorial/client/auth": ["libs/client/auth/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

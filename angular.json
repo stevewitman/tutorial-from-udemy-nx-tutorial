@@ -278,6 +278,56 @@
           }
         }
       }
+    },
+    "client-home": {
+      "projectType": "library",
+      "root": "libs/client/home",
+      "sourceRoot": "libs/client/home/src",
+      "prefix": "udemy-nx-tutorial",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/client/home/src/**/*.ts",
+              "libs/client/home/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/client/home"],
+          "options": {
+            "jestConfig": "libs/client/home/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "client-auth": {
+      "projectType": "library",
+      "root": "libs/client/auth",
+      "sourceRoot": "libs/client/auth/src",
+      "prefix": "udemy-nx-tutorial",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/client/auth/src/**/*.ts",
+              "libs/client/auth/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/client/auth"],
+          "options": {
+            "jestConfig": "libs/client/auth/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }
