@@ -253,6 +253,31 @@
           }
         }
       }
+    },
+    "admin-dashboard": {
+      "projectType": "library",
+      "root": "libs/admin/dashboard",
+      "sourceRoot": "libs/admin/dashboard/src",
+      "prefix": "udemy-nx-tutorial",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/admin/dashboard/src/**/*.ts",
+              "libs/admin/dashboard/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/admin/dashboard"],
+          "options": {
+            "jestConfig": "libs/admin/dashboard/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }

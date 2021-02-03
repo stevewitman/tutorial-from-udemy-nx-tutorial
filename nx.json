@@ -19,6 +19,7 @@
     "admin": { "tags": [] },
     "admin-e2e": { "tags": [], "implicitDependencies": ["admin"] },
     "client": { "tags": [] },
-    "client-e2e": { "tags": [], "implicitDependencies": ["client"] }
+    "client-e2e": { "tags": [], "implicitDependencies": ["client"] },
+    "admin-dashboard": { "tags": [] }
   }
 }
